@@ -1,0 +1,48 @@
+
+<mat-card>
+  <div class="example-container">
+    <form [formGroup]="destinationDetails">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label >Destination City</mat-label>
+          <input matInput  formControlName="name">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label >Image</mat-label>
+          <input matInput  formControlName="image">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label >Price</mat-label>
+          <input matInput  formControlName="price">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label >Describe the city</mat-label>
+          <textarea matInput  formControlName="desc" cols="30" rows="10"></textarea>
+        </mat-form-field>
+      </p>
+
+      <p>
+          <label>Offer </label>
+          <mat-radio-group formControlName="offer">
+            <mat-radio-button value="true"> Yes </mat-radio-button>
+            <mat-radio-button value="false"> No </mat-radio-button>
+          </mat-radio-group>
+      </p>
+
+    </form>
+
+    <div>
+      <button mat-raised-button color="primary" (click)="addCity()">Add City</button>
+    </div>
+  </div>
+</mat-card>
+

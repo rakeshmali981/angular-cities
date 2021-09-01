@@ -1,0 +1,16 @@
+<h3>List of my travelled cities</h3>
+<div>
+  <div *ngFor="let city of cities; index as i">
+    <mat-card class="main-card">
+
+      <span>City : {{city.city}}</span><br>
+      <span>Details : {{city.details}}</span><br>
+      <span>Estimated Price : {{city.price}}</span><br>
+      <mat-card class="offer-card" *ngIf="city.offer">Offer : 10% off on booking</mat-card><br>
+      <button mat-icon-button class="example-icon" (click)="deleteCity($event, i)" aria-label="Example icon-button with menu icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card>
+  </div>
+</div>
+

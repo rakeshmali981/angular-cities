@@ -1,0 +1,35 @@
+<mat-stepper [linear]="isLinear" #stepper>
+
+  <!-- <mat-step [stepControl]="secondFormGroup" label="Covid-19">
+    <form [formGroup]="secondFormGroup" class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Covid Question</mat-label>
+        <input matInput formControlName="covidQues" placeholder="Covid Question">
+      </mat-form-field>
+      <div>
+        <button mat-raised-button color="primary">Post Question</button>
+      </div>
+    </form>
+  </mat-step> -->
+  <mat-step  label="My Cities">
+    <app-desitination-list></app-desitination-list>
+  </mat-step>
+  <mat-step  label="Add City">
+    <app-destinations></app-destinations>
+  </mat-step>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup" class="example-form">
+      <ng-template matStepLabel>Climate Change</ng-template>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Climate Question</mat-label>
+        <input matInput placeholder="Climate Question" formControlName="climateQues" >
+      </mat-form-field>
+
+      <div>
+        <button mat-raised-button color="primary" (click)="askQuestion()">Post Question</button>
+      </div>
+
+      {{statements}}
+    </form>
+  </mat-step>
+</mat-stepper>
